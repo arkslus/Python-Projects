@@ -9,16 +9,16 @@ def user_input():
     # within range values
     within_range = False
 
-    # TODO: check if number is valid or within range
+    # check if number is valid or within range
     while number.isdigit() == False or within_range == False:
         number = input("Please enter a number between 0 to 10: ")
 
         # add an error message for digit check
-        if number.isdigit() == False:
+        if not number.isdigit():
             print("\nCharacter entered is not a number!")
 
         # check for range
-        if number.isdigit() == True:
+        if number.isdigit():
             if int(number) in real_values:
                 within_range = True
             else:
